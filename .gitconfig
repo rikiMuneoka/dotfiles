@@ -9,4 +9,4 @@
     status = auto
     branch = auto
 [include]
-	~/dotfiles/.gitconfig.local
+    path = ~/dotfiles/.gitconfig.local
