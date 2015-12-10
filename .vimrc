@@ -70,15 +70,13 @@ if has('vim_starting')
     set nocompatible               " Be iMproved
   endif
 
-  " Required:
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 
-" Required:
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet'
@@ -89,10 +87,13 @@ NeoBundle 'scrooloose/syntastic'
 NeoBundle 'scrooloose/syntastic'
 NeoBundle 'mattn/emmet-vim'
 
-NeoBundleCheck
 call  neobundle#end()
 
 filetype plugin indent on
+filetype indent on
+syntax on
+
+NeoBundleCheck
 
 "" neocomplcacheの設定
 " 今後AutoComplPopを入れた時に競合するので無効化する
@@ -106,6 +107,7 @@ let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_enable_underbar_completion = 1
 
 " Set minimum syntax keyword length. 
+" 0
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 
